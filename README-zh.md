@@ -2,25 +2,25 @@
 
 [English](README.md) | [中文](README-zh.md)
 
-`XP_Extinction_Toolkit` 是一个为天文学研究人员设计的 Python 库。它基于 Gaia DR3 和 LAMOST DR7 中大约37万个高质量样本计算得到的中值消光曲线，提供了一组适用于光谱和测光数据的消光改正工具。更多信息见我们的文章 (Zhang et al., under review)。
-包含以下功能(使用说明后附)：
+`XP_Extinction_Toolkit` 是一个为天文研究者设计的 Python 库。它基于 Gaia DR3 和 LAMOST DR7 中大约37万个高质量样本计算得到的中值消光曲线，提供了一组适用于光谱和测光数据的消光改正工具。更多信息见我们的文章 (Zhang et al., under review)。
+包含以下功能(后附使用说明)：
 
-1. ### **函数 [`ext_curve`]**  
+1. ### **函数 [`ext_curve`](##_1._获取_XP_消光曲线并绘图)**  
    获取银河系的高精度中值消光曲线。
 
-2. ### **函数 [`deredden`]**  
+2. ### **函数 [`deredden`](##_2._对输入光谱进行消光改正)**  
    对输入光谱进行消光改正，适用范围是 2900 - 53414 Å。
 
-3. ### **函数 [`Cal_E4455`]**  
+3. ### **函数 [`Cal_E4455`](##_3._将_E(B-V)_或_E(B-V)_SFD_转换为_E(440-550))**  
    将 E(B-V) 或 E(B-V)_SFD 通过经验公式转换成 E(440-550)。
 
-4. ### **函数 [`star_ext`]**  
+4. ### **函数 [`star_ext`](##_4._计算_1000_颗恒星的四个波段的消光)**  
    可以计算给定 Teff、logg 和红化时，输入**波段**的精确**消光**和**有效波长**。输入红化可以是E(440-550)、E(B-V) 或者 E(B-V)_SFD（指取自SFD全天二维尘埃红化图 [Schlegel et al. (1998)](https://ui.adsabs.harvard.edu/abs/1998ApJ...500..525S/abstract)）。本函数可使用 XP 消光曲线（默认）或`dust_extinction` 包提供的各类 Rv 依赖的消光曲线模型。
 
-5. ### **函数 [`star_reddening`]**  
+5. ### **函数 [`star_reddening`](##_5._根据_Teff_和_E(B-V)，计算恒星的红化)**  
    可以计算给定 Teff、logg 和红化时，输入**颜色**的精确**红化**，使用 XP 消光曲线（默认）或其他消光模型。输入红化可以是E(440-550)、E(B-V) 或者 E(B-V)_SFD。
 
-6. ### **函数 [`model_extinction`]**  
+6. ### **函数 [`model_extinction`](##_6._计算不同_SED_时的模拟消光)**  
    计算给定输入波段的模拟消光。使用 XP 消光曲线（默认）或其他消光模型。返回一个不同 Teff、E(B-V)、logg 时的各波段模拟消光值的 DataFrame。
 
 其中函数4、5、6对于测光波段（颜色）的消光（红化）估计是基于BOSZ光谱库，滤光片通带和消光曲线的。可能会和实测结果有所不同。当需要计算 GALEX，PS1，SDSS，Gaia，2MASS 和 WISE 巡天通带的消光（或红化）时，我们推荐使用另一个基于实测的消光系数包[`extinction_coefficient`](https://github.com/vnohhf/extinction_coefficient) 来进行消光改正。该包在 0 - 0.5 mag 的E(B-V)范围和 4000 - 10000 K 的温度范围内大多有效。

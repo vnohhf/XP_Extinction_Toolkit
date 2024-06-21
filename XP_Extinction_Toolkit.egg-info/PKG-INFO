@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: XP-Extinction-Toolkit
+Version: 1.0
+Summary: Extinction correction package using extinction curves derived from XP spectra
+Home-page: https://github.com/vnohhf/XP_Extinction_Toolkit
+Author: Ruoyi Zhang
+Author-email: zry@mail.bnu.edu.cn
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.rtf
+
 # XP_Extinction_Toolkit
 
 [English](README.md) | [中文](README-zh.md)

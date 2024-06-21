@@ -1,0 +1,2 @@
+[console_scripts]
+extinction_toolkit = xp_extinction_toolkit.ExtinctionToolkit:main_function

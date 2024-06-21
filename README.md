@@ -1,1 +1,1 @@
-# XP_extinction_curve
+# XP_Extinction_Toolkit

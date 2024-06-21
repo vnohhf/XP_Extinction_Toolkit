@@ -5,23 +5,23 @@
 `XP_Extinction_Toolkit` is a Python library designed for astronomy researchers. It provides a set of extinction correction tools for spectroscopic and photometric data, based on **the median extinction curve** calculated from about 370,000 high-quality samples in Gaia DR3 and LAMOST DR7. More information can be found in our article (Zhang et al., under review). 
 The functions are as follows. See the [Usage Guide](#Usage_Guide) for examples of use.
 
-1. ### **Function [`ext_curve`](##1._To_obtain_the_XP_extinction_curve_and_plot)**
+1. ### **Function `ext_curve`**
    Obtain the high-precision median extinction curve for the Milky Way.
 
-2. ### **Function [`deredden`]()**  
+2. ### **Function `deredden`**  
    Performs extinction correction on input spectra, suitable for the range of 2900 - 53414 Å.
 
-3. ### **Function [`Cal_E4455`](##_3._Transfer_E(B-V)_or_E(B-V)_SFD_to_E(440-550))**  
+3. ### **Function `Cal_E4455`**  
    A tool that uses empirical formulas to convert E(B-V) and E(B-V)_SFD into E(440-550).
 
-4. ### **Function [`star_ext`](##_4._Calculate_the_extinction_of_four_bands_for_1,000_stars)**  
+4. ### **Function `star_ext`**  
     Calculates the precise **extinction** and **effective wavelength** for input **bands** of stars with given Teff, logg, and reddening. The input reddening can be E(440-550), E(B-V), or E(B-V)_SFD (derived from the SFD full-sky two-dimensional dust reddening map [Schlegel et al. (1998)](https://ui.adsabs.harvard.edu/abs/1998ApJ...500..525S/abstract)). This function use the XP extinction curve (default) or the various Rv-dependent extinction curve models provided by the [`dust_extinction`](https://dust-extinction.readthedocs.io/en/stable/index.html) package. 
     Supports the input of additional filter passbands stored as `.dat` files from the [SVO Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/index.php).
 
-5. ### **Function [`star_reddening`](##5._Calculate_the_reddening_for_given_Teff_and_sfd_E(B-V)_SFD)** 
+5. ### **Function `star_reddening`**
     Calculates the precise **reddenting** for input **colors** of stars with given Teff, logg, and reddening, using the XP extinction curve (default) or other extinction models. The input reddening can be E(440-550), E(B-V), or E(B-V)_SFD.
 
-6. ### **Function [`model_extinction`](##_6._Calculation_of_simulated_extinction_at_different_SEDs)** 
+6. ### **Function `model_extinction`**
     Computes simulated extinction for given bands, using the XP extinction curve (default) or other extinction models. It returns a DataFrame of modeled extinction values across different Teff, E(B-V), logg for each band.
 
 Functions 4, 5, and 6 are based on the BOSZ spectral library, filter passbands, and extinction curves for estimating extinction (or reddening) in photometric bands (or colors). The results may differ from empirical measurements. When calculating extinction (or reddening) for passbands of GALEX, PS1, SDSS, Gaia, 2MASS, and WISE survey, we recommend using another Python package based on empirical reddening measurement, [`extinction_coefficient`](https://github.com/vnohhf/extinction_coefficient), for extinction correction. This package is mostly valid in the E(B-V) range of 0 - 0.5 mag and the temperature range of 4000 - 10000 K.

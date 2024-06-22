@@ -48,7 +48,7 @@ python setup.py install
 ~~~python
 import numpy as np
 import matplotlib.pyplot as plt
-from ExtinctionToolkit import ExtinctionToolkit
+from xp_extinction_toolkit import ExtinctionToolkit
 
 # Initialize the ExtinctionToolkit
 ExtTool = ExtinctionToolkit()
@@ -107,7 +107,7 @@ reddened_spec_matrix = 1 / ExtTool.deredden(ebv=ebvlist, Teff=ExtTool.teff_list,
 ## 3. Transfer E(B-V) or E(B-V)_SFD to E(440-550)
 ### 3.1 input E(B-V)
 ~~~python
-from ExtinctionToolkit import ExtinctionToolkit
+from xp_extinction_toolkit import ExtinctionToolkit
 ebv = [0.1, 0.3, 0.5]
 Teff = [4000, 6000, 8000]
 E4455 = ExtTool.Cal_E4455(ebv=ebv,Teff=Teff)
@@ -122,7 +122,7 @@ E4455 = ExtTool.Cal_E4455(sfdebv=sfdebv)
 ## 4. Calculate the extinction of four bands for 1,000 stars
 ~~~python
 import numpy as np
-from ExtinctionToolkit import ExtinctionToolkit
+from xp_extinction_toolkit import ExtinctionToolkit
 
 ExtTool = ExtinctionToolkit()
 

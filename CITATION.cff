@@ -1,0 +1,28 @@
+cff-version: 1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: Ruoyi
+  given-names: Zhang
+orcid: https://orcid.org/0000-0003-1863-1268
+- family-names: Haibo
+  given-names: Yuan
+orcid: https://orcid.org/0000-0003-2471-2363
+- family-names: Bowen
+  given-names: Huang
+orcid: https://orcid.org/0000-0002-1259-0517
+- family-names: Tao
+  given-names: Wang
+orcid: https://orcid.org/0000-0002-4878-1227
+- family-names: Lin
+  given-names: Yang
+orcid: https://orcid.org/0000-0002-9824-0461
+- family-names: Gregory
+  given-names: Green
+- family-names: Xiangyu
+  given-names: Zhang
+orcid: https://orcid.org/0000-0003-3112-3305
+
+title: An Empirical Extinction Curve Revealed by Gaia XP Spectra and LAMOST
+version: v1.0
+date-released: 2024-07-02
+                           

@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README-zh.md)
 
-`XP_Extinction_Toolkit` 是一个为天文研究者设计的 Python 库。它基于 Gaia DR3 和 LAMOST DR7 中大约37万个高质量样本计算得到的中值消光曲线，提供了一组适用于光谱和测光数据的消光改正工具。更多信息见我们的文章 (Zhang et al., publishing)。
+`XP_Extinction_Toolkit` 是一个为天文研究者设计的 Python 库。它基于 Gaia DR3 和 LAMOST DR7 中大约37万个高质量样本计算得到的中值消光曲线，提供了一组适用于光谱和测光数据的消光改正工具。更多信息见我们的文章 [(Zhang et al., 2024)](https://iopscience.iop.org/article/10.3847/1538-4357/ad613e)。
 包含以下功能(后附使用说明)：
 
 1. ### **函数 `ext_curve`**

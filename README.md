@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README-zh.md)
 
-`XP_Extinction_Toolkit` is a Python library designed for astronomy researchers. It provides a set of extinction correction tools for spectroscopic and photometric data, based on **the median extinction curve** calculated from about 370,000 high-quality samples in Gaia DR3 and LAMOST DR7. More information can be found in our article [(Zhang et al., 2024)](https://iopscience.iop.org/article/10.3847/1538-4357/ad613e). 
+`XP_Extinction_Toolkit` is a Python library designed for astronomy researchers. It provides a set of extinction correction tools for spectroscopic and photometric data, based on **the median extinction curve** calculated from about 370,000 high-quality samples in Gaia DR3 and LAMOST DR7. These tools can provide extinction correction for astronomical spectra and photometric data in any wavelength band when the extinction is known. More information can be found in our article [(Zhang et al., 2024)](https://iopscience.iop.org/article/10.3847/1538-4357/ad613e). 
 The functions are as follows. See the [Usage Guide](#Usage_Guide) for examples of use.
 
 1. ### **Function `ext_curve`**

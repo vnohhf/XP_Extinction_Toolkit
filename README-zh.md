@@ -23,7 +23,7 @@
 6. ### **函数 `model_extinction`**
    计算给定输入波段的模拟消光。使用 XP 消光曲线（默认）或其他消光模型。返回一个不同 Teff、E(B-V)、logg 时的各波段模拟消光值的 DataFrame。
 
-其中函数4、5、6对于测光波段（颜色）的消光（红化）估计是基于BOSZ光谱库，滤光片通带和消光曲线的。可能会和实测结果有所不同。当需要计算 GALEX，PS1，SDSS，Gaia，2MASS 和 WISE 巡天通带的消光（或红化）时，我们推荐使用另一个基于实测的消光系数包[`extinction_coefficient`](https://github.com/vnohhf/extinction_coefficient) 来进行消光改正。该包在 0 - 0.5 mag 的E(B-V)范围和 4000 - 10000 K 的温度范围内大多有效。
+其中函数4、5、6对于测光波段（颜色）的消光（红化）估计是基于BOSZ光谱库，滤光片通带和实测消光曲线的，属于理论与实测结合的计算，可能会和纯实测结果有所不同。当需要计算 GALEX，PS1，SDSS，Gaia，2MASS 和 WISE 波段的消光（或红化）时，我们推荐使用另一个基于实测的消光系数包[`extinction_coefficient`](https://github.com/vnohhf/extinction_coefficient) 来进行消光改正。该包在 0 - 0.5 mag 的E(B-V)范围和 4000 - 10000 K 的温度范围内大多有效。
 
 
 # 如何安装

@@ -67,7 +67,7 @@ for axi in ax:
 ~~~
 
 ## 2. 对输入光谱进行消光改正
-### 2.1 单一光谱
+### 2.1 单个光谱
 ~~~python
 ExtTool = ExtinctionToolkit()
 # 获取 BOSZ 光谱

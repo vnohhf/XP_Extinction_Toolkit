@@ -30,10 +30,10 @@
 ### 使用 pip
 ~~~
 # PyPI (推荐)
-pip install extinction_coefficient
+pip install XP_Extinction_Toolkit
 
 # 从本 github 库
-pip install git+https://github.com/vnohhf/extinction_coeffcient.git
+pip install git+https://github.com/vnohhf/XP_Extinction_Toolkit.git
 ~~~
 
 ### 从源代码安装
